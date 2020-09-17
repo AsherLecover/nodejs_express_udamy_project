@@ -62,13 +62,13 @@ const createTour = (req, res) => {
   const newTour = Object.assign({ id: newId }, req.body);
   tours.push(newTour);
   fs.writeFile(
-    `${__dirname}/dev-data/data/tours-simple.json`,
+    `${__dirname} /dev-data/data/tours-simple.json`,
     JSON.stringify(tours),
     err => {
       res.status(201).json({
         status: 'success',
         data: {
-          tour: newTour
+          tour: newTour 
         }
       });
     }
@@ -145,7 +145,7 @@ const deleteUser = (req, res) => {
 // app.post('/api/v1/tours',createTour)
 // app.get('/api/v1/tours/:id', getTour);
 // app.patch('/api/v1/tour/:id', updateTour)
-// app.delete('/api/v1/tour/:id', deleteTour)
+// app.delete('/api/v1/tour/:id', deleteTour )
 
 // 3) ROUTES
 
